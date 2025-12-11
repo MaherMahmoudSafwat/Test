@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -30,20 +29,24 @@ public class UsersController {
         return "Users are saved successfully";
     }
 
-    @PostMapping("/Generate")
-    public String getToken(@RequestBody UsersDtos usersDtos) {
-        Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(usersDtos.getUsername(), usersDtos.getPassword()));
-        if (authenticate.isAuthenticated()) {
+    @PostMapping("/Login")
+    public String LoginToA_NewUser(@RequestBody UsersDtos usersDtos)
+    {
+        Authentication authenticated = authenticationManager.authenticate
+                (
+                        new UsernamePasswordAuthenticationToken(usersDtos.getUsername(),usersDtos.getPassword())
+                );
+        if(authenticated.isAuthenticated())
+        {
             return jwtService.generateToken(usersDtos.getUsername());
-        } else {
-            throw new RuntimeException("invalid access");
         }
+        return "Invalid username or password";
     }
 
-    @GetMapping("/Validate")
-    public String validateToken(@RequestParam("Token") String Token) {
-        UserDetails usersDetails = (UserDetails) usersService.getUsersDetails(jwtService.extractUserName(Token));
-        jwtService.validateToken(Token,usersDetails);
-        return "Token is valid";
+    @GetMapping("/Test")
+    public String TestNewServiceMethod()
+    {
+        return "The current time is " + System.currentTimeMillis();
     }
+
 }

@@ -14,7 +14,7 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "Sequence_Id")
     @SequenceGenerator(name = "Sequence_Id",sequenceName = "Sequence_Id",allocationSize = 1)
-    private int id;
+    private Integer id;
     private String username;
     private String email;
     private String password;

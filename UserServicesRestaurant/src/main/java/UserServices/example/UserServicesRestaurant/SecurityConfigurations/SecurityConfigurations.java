@@ -18,44 +18,44 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfigurations {
-
-@Autowired
-private UserDetailsService userDetailsService;
-
-@Autowired
-private JwtFilter jwtFilter;
-
-@Bean
-public PasswordEncoder bCryptPasswordEncoder()
+public class SecurityConfigurations
 {
-    return new BCryptPasswordEncoder(12);
-}
+    @Autowired
+    private UserDetailsService userDetailsService;
 
-@Bean
-public AuthenticationProvider authProvider()
-{
-    DaoAuthenticationProvider provider = new DaoAuthenticationProvider(userDetailsService);
-    provider.setPasswordEncoder(bCryptPasswordEncoder());
-    return provider;
-}
+    @Autowired
+    private JwtFilter jwtFilter;
 
-@Bean
-public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
-{
-    http.csrf(customizer -> customizer.disable())
-            .authorizeHttpRequests(request -> request
-                    .anyRequest().permitAll())
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
-    return http.build();
-}
+    @Bean
+    public PasswordEncoder bCryptPasswordEncoder()
+    {
+        return new BCryptPasswordEncoder(12);
+    }
 
-@Bean
-public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception
-{
-    return config.getAuthenticationManager();
+    @Bean
+    public AuthenticationProvider authProvider()
+    {
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider(userDetailsService);
+        provider.setPasswordEncoder(bCryptPasswordEncoder());
+        return provider;
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
+    {
+        http.csrf(customizer -> customizer.disable())
+                .authorizeHttpRequests(request -> request
+                        .requestMatchers("/Restaurant/Register").permitAll()
+                        .requestMatchers("/Restaurant/Login").permitAll()
+                        .anyRequest().authenticated())
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+        return http.build();
+    }
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception
+    {
+        return config.getAuthenticationManager();
+    }
 }
-}
-//                    .requestMatchers("/Restaurant/Register", "/Restaurant/Generate", "/Restaurant/Validate")
-//                    .permitAll()

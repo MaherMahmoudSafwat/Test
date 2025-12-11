@@ -1,9 +1,9 @@
 package UserServices.example.UserServicesRestaurant.UsersService;
 
 import UserServices.example.UserServicesRestaurant.Models.Users;
+import UserServices.example.UserServicesRestaurant.Models.UsersPrincipal;
 import UserServices.example.UserServicesRestaurant.UsersRepository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +23,8 @@ public class UsersService {
         usersRepository.save(users) ;
     }
 
-    public Users getUsersDetails(String username)
+    public UsersPrincipal getUsersDetails(String username)
     {
-        return usersRepository.findByUsername(username);
+        return new UsersPrincipal(usersRepository.findByUsername(username));
     }
 }
