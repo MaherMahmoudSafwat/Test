@@ -26,16 +26,19 @@ public class JwtService {
         return Keys.hmacShaKeyFor(keyBytes);
     }
 
-    public String generateToken(String username) {
+    public String generateToken(String userId, String username) {
         Map<String, Object> claims = new HashMap<>();
+        claims.put("username", username);
+
         return Jwts.builder()
                 .setClaims(claims)
-                .setSubject(username)
+                .setSubject(userId)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 30))
                 .signWith(getKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
+
 
     public boolean validateToken(String token, UserDetails userDetails) {
         final String userName = extractUserName(token);
@@ -43,9 +46,8 @@ public class JwtService {
     }
 
     public String extractUserName(String token) {
-        return extractClaim(token, Claims::getSubject);
+        return extractClaim(token, claims -> claims.get("username", String.class));
     }
-
     private <T> T extractClaim(String token, Function<Claims, T> claimResolver) {
         final Claims claims = extractAllClaims(token);
         return claimResolver.apply(claims);

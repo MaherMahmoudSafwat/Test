@@ -5,18 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4488d85-5b41-4280-b0c3-7e1f41bd1f77" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Eureka-Restaurant-Registry-Service/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Eureka-Restaurant-Registry-Service/src/main/java/Eureka_Restaurant_Registry_Service/example/Eureka_Restaurant_Registry_Service/SecurityConfigurations/SecurityConfigurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Eureka-Restaurant-Registry-Service/src/main/java/Eureka_Restaurant_Registry_Service/example/Eureka_Restaurant_Registry_Service/SecurityConfigurations/SecurityConfigurations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Eureka-Restaurant-Registry-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Eureka-Restaurant-Registry-Service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Api-Gateway-Restaurant/src/main/java/Api_Gateway_Restaurant/example/Api_Gateway_Restaurant/Api_Gateway_Restaurant_AuthenticationsAndAuthorizationsConfigurationsFilter/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersServices/example/OrdersServices/MenusInterface/MenusInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersServices/example/OrdersServices/Models/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersServices/example/OrdersServices/Models/OrdersLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersServices/example/OrdersServices/OrdersController/OrdersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersServices/example/OrdersServices/OrdersDtos/OrdersDtos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersServices/example/OrdersServices/OrdersDtos/OrdersItemsListsDtos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersServices/example/OrdersServices/OrdersRepository/OrdersListsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/OrdersServices/example/OrdersServices/OrdersService/OrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Api-Gateway-Restaurant/src/main/java/Api_Gateway_Restaurant/example/Api_Gateway_Restaurant/Api_Gateway_Restaurant/example/Api_Gateway_Restaurant/Api_Gateway_Restaurant_Authentications_Filter/AuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Api-Gateway-Restaurant/src/main/java/Api_Gateway_Restaurant/example/Api_Gateway_Restaurant/Api_Gateway_Restaurant/example/Api_Gateway_Restaurant/Api_Gateway_Restaurant_Authentications_Filter/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Api-Gateway-Restaurant/src/main/java/Api_Gateway_Restaurant/example/Api_Gateway_Restaurant/Api_Gateway_Restaurant_AuthenticationsAndAuthorizationsConfigurationsFilter/RouteValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Api-Gateway-Restaurant/src/main/java/Api_Gateway_Restaurant/example/Api_Gateway_Restaurant/JwtService/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Api-Gateway-Restaurant/src/main/java/Api_Gateway_Restaurant/example/Api_Gateway_Restaurant/JwtService/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Api-Gateway-Restaurant/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Api-Gateway-Restaurant/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/Models/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/Models/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/Models/UsersPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/Models/UsersPrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/SecurityConfigurations/SecurityConfigurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/SecurityConfigurations/SecurityConfigurations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UserServicesRestaurantApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UserServicesRestaurantApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UsersController/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UsersController/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UsersRepository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UsersRepository/UsersRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UsersService/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UsersService/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UsersService/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/java/UserServices/example/UserServicesRestaurant/UsersService/UsersService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../UserServicesRestaurant/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -41,9 +50,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="36gjtAIYm6brZCIx07SB4DKOtSG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,11 +60,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.OrdersServicesApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/maher/Downloads/Full Microservices Project /OrdersServices"
+    "last_opened_file_path": "/home/maher/Downloads/Full Microservices Project /Api-Gateway-Restaurant"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

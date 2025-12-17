@@ -1,4 +1,4 @@
-package Api_Gateway_Restaurant.example.Api_Gateway_Restaurant.Api_Gateway_Restaurant.example.Api_Gateway_Restaurant.Api_Gateway_Restaurant_Authentications_Filter;
+package Api_Gateway_Restaurant.example.Api_Gateway_Restaurant.Api_Gateway_Restaurant_AuthenticationsAndAuthorizationsConfigurationsFilter;
 
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
@@ -10,8 +10,8 @@ import java.util.function.Predicate;
 public class RouteValidator
 {
     public static final List<String> openApiEndpoints = List.of(
-            "/Restaurant/Register",
-            "/Restaurant/Login",
+            "/Restaurant/Users/Register",
+            "/Restaurant/Users/Login",
             "/eureka"
     );
 

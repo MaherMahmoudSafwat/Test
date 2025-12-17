@@ -45,8 +45,8 @@ public class SecurityConfigurations
     {
         http.csrf(customizer -> customizer.disable())
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/Restaurant/Register").permitAll()
-                        .requestMatchers("/Restaurant/Login").permitAll()
+                        .requestMatchers("/Restaurant/Users/Register").permitAll()
+                        .requestMatchers("/Restaurant/Users/Login").permitAll()
                         .anyRequest().authenticated())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
